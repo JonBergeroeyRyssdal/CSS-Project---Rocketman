@@ -4,323 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="mystyle.css">
     <title>Supreme Rocket Maintenance - Rocketman</title>
     <style>
-      body {
-        margin: 0;
-      }
-      a {
-        text-decoration: none;
-      }
-      button {
-        width: 12rem;
-        height: 3.5rem;
-        text-transform: uppercase;
-        font-size: large;
-      }
-
-      img {
-        height: auto;
-        max-width: 100%;
-      }
-
-      .--flex {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .--white {
-        color: white;
-      }
-      .nav {
-        display: flex;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        font-size: large;
-      }
-      .nav__left {
-        flex-basis: 45%;
-      }
-      .nav__logo {
-        height: 3rem;
-        width: auto;
-      }
-      .nav__right {
-        display: none;
-        list-style: none;
-        flex-basis: 55%;
-      }
-      .nav__items {
-        flex-basis: 33%;
-      }
-      .nav__link {
-        color: black;
-        text-transform: uppercase;
-      }
-      header {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("https://rocketman.learnwagtail.com/media/images/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-1600x800.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        height: 46rem;
-        align-items: center;
-        flex-basis: 100%;
-      }
-      .header__content {
-        flex-basis: 100%;
-      }
-      .header__h1 {
-        font-size: 2.5rem;
-        font-weight: lighter;
-      }
-      .header__h2 {
-        font-size: 2rem;
-        font-weight: 100;
-      }
-      .section {
-        flex-basis: 100%;
-      }
-      .section--margin {
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
-      .section--padding-sides {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      .section-1 {
-        text-align: center;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-      }
-      .section-1__h2 {
-        font-weight: 100;
-        font-size: 2rem;
-      }
-      .section-2 {
-        margin-bottom: 3rem;
-      }
-      .section-2__card {
-        flex-basis: 100%;
-        text-align: center;
-        padding-bottom: 3rem;
-        flex-grow: 0;
-        border: 1px solid rgb(229, 229, 229);
-        margin-bottom: 5rem;
-      }
-      .section-2__h3 {
-        font-weight: lighter;
-      }
-      .section-2__link {
-        font-size: larger;
-      }
-      .section-4,
-      .section-5 {
-        margin-top: 2rem;
-      }
-
-      .section-3-4-5__link {
-        flex-basis: 100%;
-      }
-      .section-4__image {
-        min-width: 100%;
-      }
-      .section-3-4-5__information {
-        background-color: rgb(50, 43, 43);
-        padding: 1.5rem;
-        position: relative;
-        bottom: 10px;
-        flex-basis: 100%;
-      }
-      .section-3-4-5__header {
-        font-size: xx-large;
-      }
-      .section-3-4-5__paragraph {
-        font-size: x-large;
-        font-weight: lighter;
-      }
-      .section-3-4-5__button {
-        width: 16rem;
-      }
-      .section-6 {
-        text-align: center;
-      }
-      .section-6__button {
-        background-color: #814ebf;
-        border: none;
-      }
-      .section-6__header {
-        font-size: xx-large;
-        font-weight: lighter;
-      }
-      .section-7 {
-        text-align: center;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-      }
-      .section-7__quote {
-        font-size: xx-large;
-        font-weight: 900;
-      }
-      .section-7__cite {
-        text-transform: uppercase;
-        font-size: large;
-        font-weight: bold;
-      }
-      .section-8 {
-        background-color: #814ebf;
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-        text-align: center;
-      }
-
-      .section-8__information {
-        flex-basis: 100%;
-      }
-      .section-8__right {
-        flex-basis: 100%;
-      }
-      .section-8__header {
-        font-size: 2.5rem;
-      }
-      .section-8__paragraph {
-        font-size: x-large;
-      }
-      footer {
-        background-color: black;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-      .footer__header {
-        text-transform: uppercase;
-        color: grey;
-        font-size: small;
-        font-weight: bold;
-        padding-top: 1rem;
-      }
-      .footer__info {
-        font-size: large;
-      }
-      .footer__rocketman {
-        color: grey;
-        font-size: medium;
-      }
-      .footer__nav,
-      .footer__section {
-        flex-basis: 100%;
-        text-align: center;
-      }
-      .footer__nav__link {
-        font-size: 1.5rem;
-      }
-      .footer__icon {
-        width: 1.5rem;
-      }
-
-      @media (min-width: 768px) {
-        .nav__logo {
-          height: 4rem;
-          width: auto;
-        }
-        .header__content {
-          flex-basis: 100%;
-        }
-        .header__h1 {
-          font-size: 5rem;
-          font-weight: lighter;
-        }
-        .section-2__card {
-          flex-basis: 47%;
-          text-align: center;
-          padding-bottom: 3rem;
-        }
-        .section-2__card-1 {
-          margin-right: 1rem;
-        }
-        .section-2__card-2 {
-          margin-left: 1rem;
-        }
-        .footer__nav,
-        .footer__section {
-          flex-basis: 50%;
-          text-align: left;
-        }
-      }
-      @media (min-width: 1024px) {
-        .nav__right {
-          display: flex;
-        }
-        .section--margin {
-          margin-left: 3rem;
-          margin-right: 3rem;
-        }
-        .section--padding-sides {
-          padding-left: 3rem;
-          padding-right: 3rem;
-        }
-        .section-4 {
-          justify-content: flex-end;
-        }
-        .section-3-4-5__link {
-          flex-basis: 60%;
-        }
-
-        .section-4__information {
-          right: 40%;
-          bottom: 10rem;
-        }
-        .section-3,
-        .section-4,
-        .section-5 {
-          margin-bottom: -5rem;
-        }
-        .section-3-4-5__information {
-          position: relative;
-          flex-basis: 30rem;
-        }
-        .section-3__information,
-        .section-5__information {
-          left: 40%;
-          bottom: 10rem;
-        }
-
-        .section-8__button {
-          position: relative;
-          top: 40%;
-        }
-        .section-8__paragraph {
-          text-align: left;
-        }
-        .section-8__right {
-          flex-basis: 30%;
-          text-align: right;
-        }
-        .section-8 {
-          text-align: left;
-        }
-        .section-8__information {
-          flex-basis: 70%;
-          font-size: 2rem;
-        }
-        .footer__nav,
-        .footer__section {
-          flex-basis: 25%;
-        }
-      }
+      
     </style>
   </head>
   <body>
-    <nav class="section--padding-sides nav">
-      <div class="nav__left">
+    <nav class="section--padding-sides navbar">
+      <a class="nav__left nav-branding">
         <img
           class="nav__logo"
           src="https://rocketman.learnwagtail.com/static/images/logo.24c25970fb09.png"
-          alt=""
+          alt="Supreme Rocket Man Logo"
         />
-      </div>
-      <ul class="nav__right --flex">
+      </a>
+      <ul class="nav__right flex">
         <li class="nav__items">
           <a href="" class="nav__link">Services</a>
         </li>
@@ -331,8 +31,26 @@
           <a href="" class="nav__link">Wagtail Course</a>
         </li>
       </ul>
+      <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>      
     </nav>
-    <header class="section--padding-sides --flex --white">
+    <div class="nav__under-section">
+      <ul class="nav_under-section__list">
+        <li class="nav__under-section__list__items">
+          <a href="" class="nav__link">Services</a>
+        </li>
+        <li class="nav__under-section__list__items">
+          <a href="" class="nav__link">Contact</a>
+        </li>
+        <li class="nav__under-section__list__items">
+          <a href="" class="nav__link">Wagtail Course</a>
+        </li>
+      </ul>
+    </div>
+    <header class="section--padding-sides flex white">
       <div class="header__content">
         <h1 class="header__h1">Supreme Rocket Maintenance</h1>
         <h2 class="header__h2">
@@ -347,13 +65,13 @@
           Your rocket is valuable. Let the professionals work on it.
         </h2>
       </section>
-      <section class="section section--margin section-2 --flex">
+      <section class="section section--margin section-2 flex">
         <article class="section-2__card section-2__card-1">
           <a href="">
             <img
               class=""
               src="https://rocketman.learnwagtail.com/media/images/hello-i-m-nik-8yCmQODY2SY-unsplash.2e16d0ba.fill-570x370.jpg"
-              alt=""
+              alt="Toy astronaut"
             />
           </a>
           <h2 class="section-2__h2">It's not a toy</h2>
@@ -367,7 +85,7 @@
           <a href="">
             <img
               src="https://rocketman.learnwagtail.com/media/images/nasa-n463SoeSiVY-unsplash.2e16d0ba.fill-570x370.jpg"
-              alt=""
+              alt="Rocket taking of in the night"
             />
           </a>
           <h2 class="section-2__h2">Rockets are cool!</h2>
@@ -377,50 +95,50 @@
           <a href="" class="section-2__link">Contact us</a>
         </article>
       </section>
-      <section class="section section--margin section-3 --flex">
+      <section class="section section--margin section-3 flex">
         <a class="section-3-4-5__link" href="">
           <img
             src="https://rocketman.learnwagtail.com/media/images/spacex-MEW1f-yu2KI-unsplash.2e16d0ba.fill-786x552.jpg"
-            alt=""
+            alt="Two rockets landing"
           />
         </a>
         <div class="section-3-4-5__information section-3__information">
-          <h2 class="section-3-4-5__header --white">Self Landing Rocket</h2>
-          <p class="section-3-4-5__paragraph --white">
+          <h2 class="section-3-4-5__header white">Self Landing Rocket</h2>
+          <p class="section-3-4-5__paragraph white">
             Probably the coolest thing ever!! We can program this for you.
           </p>
           <button class="section-3-4-5__button">More details</button>
         </div>
       </section>
-      <section class="section section--margin section-4 --flex">
+      <section class="section section--margin section-4 flex">
         <a class="section-3-4-5__link" href="">
           <img
             class="section-4__image"
             src="https://rocketman.learnwagtail.com/media/images/pablo-guerrero-pGXUwHZQ5eI-unsplas.2e16d0ba.fill-786x552.jpg"
-            alt=""
+            alt="Close up photo of white rocket"
           />
         </a>
         <div class="section-3-4-5__information section-4__information">
-          <h2 class="section-3-4-5__header --white">We'll clean your rocket</h2>
-          <p class="section-3-4-5__paragraph --white">
+          <h2 class="section-3-4-5__header white">We'll clean your rocket</h2>
+          <p class="section-3-4-5__paragraph white">
             This image has nothing to do with cleaning. But it's kind of neat
             still.
           </p>
           <button class="section-3-4-5__button">More details</button>
         </div>
       </section>
-      <section class="section section--margin section-5 --flex">
+      <section class="section section--margin section-5 flex">
         <a class="section-3-4-5__link" href="">
           <img
             src="https://rocketman.learnwagtail.com/media/images/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-786x552.jpg"
-            alt=""
+            alt="Rocket taking off in front of lake"
           />
         </a>
         <div class="section-3-4-5__information section-5__information">
-          <h2 class="section-3-4-5__header --white">
+          <h2 class="section-3-4-5__header white">
             Rockets are gas guzzlers
           </h2>
-          <p class="section-3-4-5__paragraph --white">
+          <p class="section-3-4-5__paragraph white">
             If you think gas is expensive now.. think about rocket prices!
             Luckily, we water our gas down to give you more bang for your buck.
           </p>
@@ -431,7 +149,7 @@
         <h2 class="section-6__header">
           We've also partnered with Skynet to maintain humanoid robotics.
         </h2>
-        <button class="section-6__button --white">Contact us</button>
+        <button class="section-6__button white">Contact us</button>
       </section>
       <section class="section section-7">
         <div>
@@ -442,7 +160,7 @@
           <cite class="section-7__cite">— Totally not spacex 😉</cite>
         </div>
       </section>
-      <section class="section section-8 section--padding-sides --white">
+      <section class="section section-8 section--padding-sides white">
         <div class="section-8__information">
           <h2 class="section-8__header">
             We'll take good care of your rocket.
@@ -460,19 +178,19 @@
       </section>
     </main>
 
-    <footer class="section--padding-sides --flex --white">
+    <footer class="section--padding-sides flex white">
       <nav class="footer__nav">
         <div class="footer__header">Links</div>
-        <p><a class="footer__nav__link --white" href="">Services</a><br /></p>
-        <p><a class="footer__nav__link --white" href="">Contact</a><br /></p>
+        <p><a class="footer__nav__link white" href="">Services</a><br /></p>
+        <p><a class="footer__nav__link white" href="">Contact</a><br /></p>
         <p>
-          <a class="footer__nav__link --white" href="">Wagtail Course</a><br />
+          <a class="footer__nav__link white" href="">Wagtail Course</a><br />
         </p>
       </nav>
       <section class="footer__section">
         <div class="footer__header">Contact us</div>
         <p class="footer__info">
-          Contact us anytime at <br /><a class="--white" href=""
+          Contact us anytime at <br /><a class="white" href=""
             >gary@totallyfakeemail.com</a
           >
         </p>
@@ -498,5 +216,7 @@
         <p class="footer__rocketman">© 2022 Rocketman</p>
       </section>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
+ 
