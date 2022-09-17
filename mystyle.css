@@ -1,0 +1,427 @@
+.hamburger {
+    cursor: pointer;
+    border: 1px solid grey;
+    padding: 0.5rem;
+    border-radius: 3px;
+    justify-content: flex-end;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    right: 3rem;
+}
+
+.hamburger.active {
+    border: 3px solid black;
+}
+
+.bar {
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.5rem auto;
+    background-color: grey;
+}
+
+.nav__under-section {
+    height: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transition: height 500ms ease;
+    z-index: -1;
+}
+
+.nav__under-section.active {
+    height: 7rem;
+}
+
+.nav_under-section__list {
+    list-style: none;
+    flex-basis: 100%;
+    z-index: -1;
+}
+
+.nav__under-section__list__items {
+    padding-bottom: 1rem;
+    z-index: -1;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    width: 12rem;
+    height: 3.5rem;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.white {
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: large;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.nav__left {
+    flex-basis: 45%;
+}
+
+.nav__logo {
+    height: 3rem;
+    width: auto;
+}
+
+.nav__right {
+    display: none;
+    list-style: none;
+    flex-basis: 55%;
+}
+
+.nav__items {
+    flex-basis: 33%;
+}
+
+.nav__link {
+    color: black;
+    text-transform: uppercase;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://rocketman.learnwagtail.com/media/images/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-1600x800.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 46rem;
+    align-items: center;
+    flex-basis: 100%;
+    z-index: 10;
+}
+
+.header__content {
+    flex-basis: 100%;
+}
+
+.header__h1 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.header__h2 {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.section {
+    flex-basis: 100%;
+}
+
+.section--margin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.section--padding-sides {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.section-1 {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.section-1__h2 {
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.section-2 {
+    margin-bottom: 3rem;
+}
+
+.section-2__card {
+    flex-basis: 100%;
+    text-align: center;
+    padding-bottom: 3rem;
+    flex-grow: 0;
+    border: 1px solid rgb(229, 229, 229);
+    margin-bottom: 5rem;
+}
+
+.section-2__h3 {
+    font-weight: lighter;
+}
+
+.section-2__link {
+    font-size: larger;
+}
+
+.section-4,
+.section-5 {
+    margin-top: 2rem;
+}
+
+.section-3-4-5__link {
+    flex-basis: 100%;
+}
+
+.section-4__image {
+    min-width: 100%;
+}
+
+.section-3-4-5__information {
+    background-color: rgb(50, 43, 43);
+    padding: 1.5rem;
+    position: relative;
+    bottom: 10px;
+    flex-basis: 100%;
+}
+
+.section-3-4-5__header {
+    font-size: xx-large;
+}
+
+.section-3-4-5__paragraph {
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+.section-3-4-5__button {
+    width: 16rem;
+}
+
+.section-6 {
+    text-align: center;
+}
+
+.section-6__button {
+    background-color: #814ebf;
+    border: none;
+}
+
+.section-6__header {
+    font-size: xx-large;
+    font-weight: lighter;
+}
+
+.section-7 {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-7__quote {
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.section-7__cite {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bold;
+}
+
+.section-8 {
+    background-color: #814ebf;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    text-align: center;
+}
+
+.section-8__information {
+    flex-basis: 100%;
+}
+
+.section-8__right {
+    flex-basis: 100%;
+}
+
+.section-8__header {
+    font-size: 2.5rem;
+}
+
+.section-8__paragraph {
+    font-size: x-large;
+}
+
+footer {
+    background-color: black;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.footer__header {
+    text-transform: uppercase;
+    color: grey;
+    font-size: small;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.footer__info {
+    font-size: large;
+}
+
+.footer__rocketman {
+    color: grey;
+    font-size: medium;
+}
+
+.footer__nav,
+.footer__section {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.footer__nav__link {
+    font-size: 1.5rem;
+}
+
+.footer__icon {
+    width: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .nav__logo {
+        height: 4rem;
+        width: auto;
+    }
+
+    .header__content {
+        flex-basis: 100%;
+    }
+
+    .header__h1 {
+        font-size: 5rem;
+        font-weight: lighter;
+    }
+
+    .section-2__card {
+        flex-basis: 47%;
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+    .section-2__card-1 {
+        margin-right: 1rem;
+    }
+
+    .section-2__card-2 {
+        margin-left: 1rem;
+    }
+
+    .footer__nav,
+    .footer__section {
+        flex-basis: 50%;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav__under-section {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav__right {
+        display: flex;
+    }
+
+    .section--margin {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .section--padding-sides {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .section-4 {
+        justify-content: flex-end;
+    }
+
+    .section-3-4-5__link {
+        flex-basis: 60%;
+    }
+
+    .section-4__information {
+        right: 40%;
+        bottom: 10rem;
+    }
+
+    .section-3,
+    .section-4,
+    .section-5 {
+        margin-bottom: -5rem;
+    }
+
+    .section-3-4-5__information {
+        position: relative;
+        flex-basis: 30rem;
+    }
+
+    .section-3__information,
+    .section-5__information {
+        left: 40%;
+        bottom: 10rem;
+    }
+
+    .section-8__button {
+        position: relative;
+        top: 40%;
+    }
+
+    .section-8__paragraph {
+        text-align: left;
+    }
+
+    .section-8__right {
+        flex-basis: 30%;
+        text-align: right;
+    }
+
+    .section-8 {
+        text-align: left;
+    }
+
+    .section-8__information {
+        flex-basis: 70%;
+        font-size: 2rem;
+    }
+
+    .footer__nav,
+    .footer__section {
+        flex-basis: 25%;
+    }
+}
