@@ -28,6 +28,7 @@
     margin-right: 2rem;
     transition: height 500ms ease;
     z-index: -1;
+    position: relative;
 }
 
 .nav__under-section.active {
